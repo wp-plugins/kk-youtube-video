@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>kk YouTube Video</title>
+<script type="text/javascript" src="tiny_mce_popup.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="kkYouTubeVideo.js"></script>
+<style type="text/css">
+ul,ol,li {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+._busy {
+	background-image: url(loading.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+._left {
+	float:left;
+}
+._right {
+	float:right;
+}
+.kkYouTubeVideo {
+	width: 260px;
+	padding: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+.kkYouTubeVideo input:focus {
+	outline: none;
+}
+.kkYouTubeVideo input {
+	padding-right: 5px;
+	padding-left: 5px;
+	height: 30px;
+	margin-top: 5px;
+	font-family: Verdana, Geneva, sans-serif;
+	line-height: 30px;
+}
+.kkYouTubeVideo input#keyword {
+	width: 140px;
+	margin-right:2px;
+}
+.kkYouTubeVideo input#width {
+	width: 40px;
+	margin-right:2px;
+}
+.kkYouTubeVideo input#height {
+	width: 40px;
+}
+.kkYouTubeVideo .results {
+	clear: both;
+	margin-top: 5px;
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+.navigation {
+	overflow: hidden;
+}
+.navigation a {
+	text-decoration:none;
+	font-size:14px;
+	color:#C30;
+	display:none;
+}
+.navigation a:hover {
+	color:#333;
+}
+ul.list li {
+	background-color: #FFF;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #CCC;
+	padding: 5px;
+	overflow: hidden;
+}
+ul.list li .img {
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
+}
+ul.list li .time {
+	color: #999;
+	margin-top: 10px;
+}
+ul.list li a.title {
+	color: #06C;
+	font-size: 11px;
+	display: block;
+	font-weight:normal;
+	cursor: pointer;
+	text-decoration:none;
+}
+ul.list li a.title:hover {
+	color: #C30;
+}
+.total {
+	display: block;
+	text-align: center;
+	color: #666;
+	float: left;
+	margin-left: 60px;
+}
+#ytapiplayer {
+	display: none;
+}
+#resultSample {
+	display: none;
+}
+.link {
+    width: 154px;
+	margin-right: auto;
+	margin-left: auto;	
+}
+a.insertVideo {
+	text-align: center;
+	margin-top: 5px;
+	display: none;
+	padding: 2px;
+	text-decoration: none;
+	background-color: #C30;
+	color: #FFF !important;
+	border: 1px solid #8C2300;
+	width: 150px;
+	margin-right: auto;
+	margin-left: auto;
+}
+a.insertVideo:hover {
+	background:#FFF;
+	border: 1px solid #999;
+	color:#999 !important;
+}
+a, img {
+	border: 0px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="kkYouTubeVideo">
+    <div id="ytapiplayer">
+      You need Flash player 8+ and JavaScript enabled to view this video.
+    </div>
+    <input type="text" name="keyword" id="keyword" value="search..." class="_left" />
+    <input type="text" name="width" id="width" value="width" class="_left" />
+    <input type="text" name="height" id="height" value="height" class="_left" />
+    
+    <div class="results">
+        <span class="credits">
+            <p>
+                <strong>Developed by:</strong> <a href="http://wakeusup.com/2011/10/kk-youtube-video/" target="_blank">WakeUsUp (Kamal Khan)</a>
+            </p>
+            <p>
+                <strong>Search: </strong> Provide your search term in the input field provided (Top Left) and press enter
+            </p>
+            <p>
+                <strong>Select: </strong> Select a video by clicking its title. It will become available in the player at the top.
+            </p>
+            <p>
+                <strong>Width: </strong> Adjust the width of the embedded video to fit your needs (Default: 640)
+            </p>
+            <p>
+                <strong>Height: </strong> Adjust the height of the embedded video to fit your needs (Default: 385)
+            </p>
+            <p>
+                <strong>Happy?: </strong> Click the button 'Insert Selected Video' at the bottom and you are good to go :)
+            </p>
+            <p>
+                <strong>Still worried or need something to say?: </strong> <a href="http://wakeusup.com/2011/10/kk-youtube-video/" target="_blank">Visit the Plugin Page</a>
+            </p>
+            <p>
+                <strong>Donate: </strong> <a href="https://load.payoneer.com/LoadToPage.aspx?email=umnuscom@gmail.com" target="_blank"><img src="donate.png" width="128" height="128" title="Buy me a coffee" /></a>
+            </p>
+        </span>
+        <div class="navigation">
+          <a href="#right" class="_right" rel="more" title="More Results">&rArr;</a><a href="#left" class="_left" rel="back" title="Previous Results">&lArr;</a><span class="total"></span>
+        </div>
+        <ul class="list">
+
+        </ul>
+        <div id="resultSample">
+            <li>
+                <div class="img _left"><img src="%img%" width="50" height="50" title="%ftitle%" /></div>
+                <a href="#%id%" class="title" title="%ftitle%" rel="video_id">%title%</a>
+                <div class="time">%length%</div>
+            </li>
+        </div>
+  </div>
+  <div class="link">
+    <a href="javascript:kkyoutubevideo.insert();" class="insertVideo">Insert Selected Video</a>
+    </div>
+</div>
+
+</body>
+</html>
