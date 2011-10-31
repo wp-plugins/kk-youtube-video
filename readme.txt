@@ -73,6 +73,8 @@ Hop on to the plugin page, send me a comment and I will be more happy to assist 
 
 == Changelog == 
 
+= 0.2 =
+* Fixed js issue for inline popup
 = 0.1 =
 * Plugin available at wordpress repository
 
