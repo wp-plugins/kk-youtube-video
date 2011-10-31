@@ -4,7 +4,7 @@
 Plugin Name: kk Youtube Video
 Plugin URI: http://wakeusup.com/2011/10/kk-youtube-video/
 Description: Easily embed youtube videos in your post or page. This plugin will allow you to search for any video within wordpress, choose a video, play it and insert the video anywhere in your post or page. Now you dont need to go to youtube.com and search for your favourite videos.
-Version: 0.1
+Version: 0.2
 Author: Kamal Khan
 Author URI: http://bhittani.com
 */

@@ -11,7 +11,7 @@ Requires at least: 3.0
 
 Tested up to: 3.2.1
 
-Stable tag: 0.1
+Stable tag: 0.2
 
 
 Easily embed youtube videos in your post or page. Search for any video within wordpress, play it and insert the video anywhere in your post or page.
